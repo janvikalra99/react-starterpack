@@ -1,25 +1,7 @@
-import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './style.scss';
 
+const App = () => <div className="test">All the REACT are belong to us!</div>;
 
-let counter = -1;
-
-function secCounter() {
-  setInterval(() => { $('#main').html(`You've have been on this page for ${counter += 1} seconds.`); }, 1000);
-}
-
-secCounter();
-
-// QUESTION: WHY DOESN'T THIS WORK?
-
-// let num = 0;
-//
-// function increment(){
-//   $('#main').html(`You have been on this page for ${ num++ } seconds.`);
-// }
-//
-// function print(){
-//   setInterval(increment(), 1000);
-// }
-//
-// print();
+ReactDOM.render(<App />, document.getElementById('main'));
